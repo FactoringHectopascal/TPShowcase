@@ -1,7 +1,7 @@
 - Create A Main Menu (Done, Basic)
 - Create A Basic Scene for the Main Menu to load. (Done, Finished)
-- Pause Menu
 - Basic Player Character (Shooting, Movement, Health.)
+- Pause Menu
 - Health Bar/Other UI elements like Stamina (If these things were to be added.)
 - Test/Add Win/Lose Conditions
 - Enemy Prefab (Add Health, Shooting, etc.)
