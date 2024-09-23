@@ -1,5 +1,5 @@
-- Create A Main Menu
-- Create A Basic Scene for the Main Menu to load.
+- Create A Main Menu (Done, Basic)
+- Create A Basic Scene for the Main Menu to load. (Done, Finished)
 - Pause Menu
 - Basic Player Character (Shooting, Movement, Health.)
 - Health Bar/Other UI elements like Stamina (If these things were to be added.)
