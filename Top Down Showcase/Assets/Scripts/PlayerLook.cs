@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,18 +10,12 @@ public class PlayerLook : MonoBehaviour
     // https://docs.unity3d.com/ScriptReference/Transform.LookAt.html
     // https://docs.unity3d.com/ScriptReference/Camera.ScreenToWorldPoint.html
     // https://docs.unity3d.com/ScriptReference/Vector3-up.html (Literally just a shorthand)
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
        
         Vector3 mousePos = Input.mousePosition;
-        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-        transform.LookAt(mousePos);
+        mousePos.Normalize();
+        mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.transform.position.y));
+        transform.LookAt(mousePos + Vector3.up * transform.position.y);
     }
 }
