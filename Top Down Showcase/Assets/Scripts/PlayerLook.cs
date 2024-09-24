@@ -18,6 +18,9 @@ public class PlayerLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
+        Vector3 mousePos = Input.mousePosition;
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        transform.LookAt(mousePos);
     }
 }
