@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerHealthES : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerHealthES : MonoBehaviour
     float health = 10;
     [SerializeField]
     float maxHealth;
+    [SerializeField]
+    Image healthBar;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class PlayerHealthES : MonoBehaviour
         if (collision.gameObject.tag == "EnemyBullet")
         {
             health -= 1;
+            healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
