@@ -9,4 +9,5 @@
 - Create Art/Dev Art
 - Adding Animation to player character and enemies, also other things if I should deem so.
 - Start Designing First Level - this entails things like adding collision, level layouts etc.
+- Start Designing Second Level when first level is finished.
 
