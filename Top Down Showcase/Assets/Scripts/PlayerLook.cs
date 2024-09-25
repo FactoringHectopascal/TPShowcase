@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
@@ -10,12 +11,18 @@ public class PlayerLook : MonoBehaviour
     // https://docs.unity3d.com/ScriptReference/Transform.LookAt.html
     // https://docs.unity3d.com/ScriptReference/Camera.ScreenToWorldPoint.html
     // https://docs.unity3d.com/ScriptReference/Vector3-up.html (Literally just a shorthand)
+
     void Update()
     {
-       
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.Normalize();
-        mousePos = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.transform.position.y));
-        transform.LookAt(mousePos + Vector3.up * transform.position.y);
+        if (Time.timeScale >= 1)
+        {
+            FaceMouseDir();
+        }
+   
+    }
+    public void FaceMouseDir()
+    {
+        Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.up = mousepos - new Vector2(transform.position.x, transform.position.y);
     }
 }
