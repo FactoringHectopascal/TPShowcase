@@ -18,7 +18,7 @@ public class PlayerLook : MonoBehaviour
         {
             FaceMouseDir();
         }
-   
+
     }
     public void FaceMouseDir()
     {
