@@ -12,6 +12,8 @@ public class PlayerHealthES : MonoBehaviour
     float maxHealth;
     [SerializeField]
     Image healthBar;
+    [SerializeField]
+    float healthregen = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,13 @@ public class PlayerHealthES : MonoBehaviour
     void Update()
     {
 
+    }
+    private void regen()
+    {
+        if (health < 3)
+        {
+            health += healthregen * Time.deltaTime;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
