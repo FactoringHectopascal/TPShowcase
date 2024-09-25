@@ -6,13 +6,15 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField]
     float health = 3;
+    [SerializeField]
     Image healthBar;
+    [SerializeField]
     float maxHealth;
     // Start is called before the first frame update
     void Start()
     {
         maxHealth = health;
-        healthBar = GetComponentsInChildren<Image>()[1];
+        healthBar = GetComponentsInChildren<Image>()[0];
         healthBar.fillAmount = health / maxHealth;
     }
 

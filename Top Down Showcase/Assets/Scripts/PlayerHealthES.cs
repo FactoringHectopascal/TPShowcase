@@ -13,6 +13,10 @@ public class PlayerHealthES : MonoBehaviour
     [SerializeField]
     Image healthBar;
 
+    private void Start()
+    {
+        maxHealth = health;
+    }
     [SerializeField]
     string LevelLose;
     private void OnTriggerEnter2D(Collider2D collision)
