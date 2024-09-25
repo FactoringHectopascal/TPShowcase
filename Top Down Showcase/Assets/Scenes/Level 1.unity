@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 457660299}
   - component: {fileID: 457660300}
   - component: {fileID: 457660301}
+  - component: {fileID: 457660302}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -519,6 +520,19 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &457660302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 457660288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d5fd45ed13b1647a18175567ee9afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelToLoad: Level 1
 --- !u!1 &582549439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +1951,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064826632}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
