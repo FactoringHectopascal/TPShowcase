@@ -39,4 +39,5 @@ public class PlayerShoot : MonoBehaviour
             //Camera converts this onto its plane of existence, however this also includes the z value.
         }
     }
+
 }

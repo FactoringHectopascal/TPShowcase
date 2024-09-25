@@ -12,26 +12,9 @@ public class PlayerHealthES : MonoBehaviour
     float maxHealth;
     [SerializeField]
     Image healthBar;
+
     [SerializeField]
-    float healthregen = 2;
-    // Start is called before the first frame update
-    void Start()
-    {
-        maxHealth = health;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    private void regen()
-    {
-        if (health < 3)
-        {
-            health += healthregen * Time.deltaTime;
-        }
-    }
+    string LevelLose;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "EnemyBullet")
@@ -40,7 +23,7 @@ public class PlayerHealthES : MonoBehaviour
             healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene(LevelLose);
             }
         }
     }
