@@ -8,6 +8,7 @@ TagManager:
   - PlayerBullet
   - EnemyBullet
   - medkit
+  - ammobox
   layers:
   - Default
   - TransparentFX
