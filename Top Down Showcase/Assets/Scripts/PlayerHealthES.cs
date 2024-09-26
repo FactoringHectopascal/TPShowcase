@@ -21,7 +21,7 @@ public class PlayerHealthES : MonoBehaviour
     private void Start()
     {
         maxHealth = health;
-        parryCooldown = false;
+        
     }
     [SerializeField]
     string LevelLose;
