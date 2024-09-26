@@ -13,10 +13,6 @@ public class PlayerHealthES : MonoBehaviour
     float maxHealth;
     [SerializeField]
     Image healthBar;
-    [SerializeField]
-    float parrytimer = 2f;
-    [SerializeField]
-    bool parryCooldown = false;
 
     private void Start()
     {
@@ -35,6 +31,11 @@ public class PlayerHealthES : MonoBehaviour
             {
                 SceneManager.LoadScene(LevelLose);
             }
+        }
+        if (collision.gameObject.tag == "medkit")
+        {
+            health += 2;
+            healthBar.fillAmount = health / maxHealth;
         }
     }
     
