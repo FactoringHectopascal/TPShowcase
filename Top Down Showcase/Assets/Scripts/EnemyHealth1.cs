@@ -12,7 +12,6 @@ public class EnemyHealth1 : MonoBehaviour
     float maxHealth;
     [SerializeField]
     GameObject prefab;
-    // Start is called before the first frame update
     void Start()
     {
         maxHealth = health;
@@ -20,7 +19,6 @@ public class EnemyHealth1 : MonoBehaviour
         healthBar.fillAmount = health / maxHealth;
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -33,7 +31,7 @@ public class EnemyHealth1 : MonoBehaviour
             healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
             {
-                GameObject medkit = Instantiate(prefab, transform.position, Quaternion.identity);
+                Instantiate(prefab, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
         }

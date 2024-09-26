@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -15,6 +16,14 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     float shootDelay = 0.5f;
     // Update is called once per frame
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "ammobox")
+        {
+            shootSpeed += 2f;
+            shootDelay -= 0.05f;
+        }
+    }
     void Update()
     {
         timer += Time.deltaTime; // 0.01666666666s if 60f/s
