@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,23 +11,28 @@ public class EnemyShoot : MonoBehaviour
     float shootSpeed = 10f;
     [SerializeField]
     float bulletLifetime = 2.0f;
+    [SerializeField]
     float timer = 0;
     [SerializeField]
     float shootDelay = 0.5f;
     GameObject player;
     [SerializeField]
-    float shootRange = 5;
-    // Start is called before the first frame update
+    float shootRange = 5f;
+    [SerializeField]
+    float shotLeadMult = 1f;
+    [SerializeField]
+    float shotVariance = 10f;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-            Vector3 shootDir = player.transform.position - transform.position;
+        Vector3 shootDir = player.transform.position - transform.position + new Vector3(
+            (player.GetComponent<Rigidbody2D>().velocity.x * shotLeadMult) + UnityEngine.Random.Range(-1 * shotVariance, shotVariance),
+            (player.GetComponent<Rigidbody2D>().velocity.y * shotLeadMult) + UnityEngine.Random.Range(-1 * shotVariance, shotVariance), 0);
         if(timer > shootDelay && shootDir.magnitude <= shootRange)
         {
             timer = 0;
@@ -34,6 +40,7 @@ public class EnemyShoot : MonoBehaviour
             GameObject bullet = Instantiate(prefab, transform.position, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = shootDir * shootSpeed;
             Destroy(bullet, bulletLifetime);
+            
         }
     }
 }
