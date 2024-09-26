@@ -310,9 +310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35694fa26eeae5043be9601e154c8e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 2
-  ChaseTriggerDistance: 5
-  returnHome: 1
+  chaseSpeed: 8
+  ChaseTriggerDistance: 15
+  returnHome: 0
 --- !u!114 &3462255403248897659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,8 +328,11 @@ MonoBehaviour:
   prefab: {fileID: 259900734784683009, guid: d4b72011a252a6e4583b3f54cd4208f6, type: 3}
   shootSpeed: 35
   bulletLifetime: 2
+  timer: 0
   shootDelay: 0.5
   shootRange: 20
+  shotLeadMult: 0.2
+  shotVariance: 0
 --- !u!114 &7435562988103610848
 MonoBehaviour:
   m_ObjectHideFlags: 0

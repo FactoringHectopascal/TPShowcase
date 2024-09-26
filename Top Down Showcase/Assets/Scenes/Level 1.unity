@@ -494,11 +494,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3462255403248897659, guid: c5c1ff000cda64a438291a448b803451, type: 3}
       propertyPath: shotLeadMult
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3462255403248897659, guid: c5c1ff000cda64a438291a448b803451, type: 3}
       propertyPath: shotVariance
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3988614555505278112, guid: c5c1ff000cda64a438291a448b803451, type: 3}
       propertyPath: m_Name
@@ -781,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6886261905200214095, guid: d58b02aa5cd38d4479c2da936d8d0c3a, type: 3}
       propertyPath: health
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6886261905200214095, guid: d58b02aa5cd38d4479c2da936d8d0c3a, type: 3}
       propertyPath: healthBar

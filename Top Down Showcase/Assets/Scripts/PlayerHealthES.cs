@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,10 +13,15 @@ public class PlayerHealthES : MonoBehaviour
     float maxHealth;
     [SerializeField]
     Image healthBar;
+    [SerializeField]
+    float parrytimer = 2f;
+    [SerializeField]
+    bool parryCooldown = false;
 
     private void Start()
     {
         maxHealth = health;
+        parryCooldown = false;
     }
     [SerializeField]
     string LevelLose;
@@ -31,4 +37,5 @@ public class PlayerHealthES : MonoBehaviour
             }
         }
     }
+    
 }
