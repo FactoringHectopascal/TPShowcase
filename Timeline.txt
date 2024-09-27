@@ -1,13 +1,13 @@
-- Create A Main Menu (Done, Basic)
+- Create A Main Menu (Complete)
 - Create A Basic Scene for the Main Menu to load. (Done, Finished)
 - Basic Player Character (Shooting, Movement, Health.) 
 - Enemy Prefab (Add Health, Shooting, etc.) (Done)
 - Test/Add Win/Lose Conditions (Complete)
-- Pause Menu (Complete, Basic, Need Sprites and Art)
+- Pause Menu (Complete)
 - Health Bar/Other UI elements like Stamina (Health Bar Complete, Enemy Health Bar Complete)
 - Create A Second Scene & Condition to move on to a second level (Condition Created)
 - Create Art/Dev Art (In Progress)
-- Adding Animation to player character and enemies, also other things if I should deem so.
-- Start Designing First Level - this entails things like adding collision, level layouts etc.
+- Adding Animation to player character and enemies (Done, no gunfire animation.)
+- Start Designing First Level (Done, subject to improvement)
 - Start Designing Second Level when first level is finished.
 
