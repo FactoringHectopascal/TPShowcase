@@ -10,6 +10,8 @@ TagManager:
   - medkit
   - ammobox
   - speedboost
+  - shield
+  - shieldbox
   layers:
   - Default
   - TransparentFX
