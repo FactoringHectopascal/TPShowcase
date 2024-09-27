@@ -33,6 +33,15 @@ public class PlayerHealthES : MonoBehaviour
                 SceneManager.LoadScene(LevelLose);
             }
         }
+        if(collision.gameObject.tag == "mine")
+        {
+            health -= 2;
+            healthBar.fillAmount = health / maxHealth;
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(LevelLose);
+            }
+        }
         if (collision.gameObject.tag == "medkit")
         {
             health += 2;

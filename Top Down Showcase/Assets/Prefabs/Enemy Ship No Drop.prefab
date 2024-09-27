@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 7588538513961073041}
   - component: {fileID: 3602134879842769095}
   - component: {fileID: 898344294170945230}
-  - component: {fileID: 7492901486387940011}
+  - component: {fileID: 8194008187632108515}
   m_Layer: 0
   m_Name: Enemy Ship No Drop
   m_TagString: Enemy
@@ -282,8 +282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35694fa26eeae5043be9601e154c8e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 8
-  ChaseTriggerDistance: 15
+  chaseSpeed: 1
+  ChaseTriggerDistance: 20
   returnHome: 0
 --- !u!114 &8850963825507201347
 MonoBehaviour:
@@ -298,13 +298,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 259900734784683009, guid: d4b72011a252a6e4583b3f54cd4208f6, type: 3}
-  shootSpeed: 25
+  shootSpeed: 18
   bulletLifetime: 1.5
   timer: 0
-  shootDelay: 0.2
-  shootRange: 20
+  shootDelay: 0.4
+  shootRange: 25
   shotLeadMult: 0.4
-  shotVariance: 3
+  shotVariance: 3.5
 --- !u!114 &2922862579540029678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,7 +408,7 @@ PolygonCollider2D:
       - {x: -0.029317219, y: 0.42792767}
       - {x: -0.10583495, y: 0.33222455}
   m_UseDelaunayMesh: 0
---- !u!114 &7492901486387940011
+--- !u!114 &8194008187632108515
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -417,13 +417,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5828337229936903881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cca72c20fe4106d48a5a5fad04bc5eff, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f4241595cd54944ea12bce8dc3c4423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 4
   healthBar: {fileID: 1083059493029720768}
   maxHealth: 4
-  prefab: {fileID: 5871315473528571521, guid: 80b7b4c4c03cc4b4bba5b379154fe5da, type: 3}
 --- !u!1 &6420677730008391963
 GameObject:
   m_ObjectHideFlags: 0
