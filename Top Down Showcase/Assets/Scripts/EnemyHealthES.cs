@@ -5,12 +5,11 @@ using UnityEngine;
 public class EnemyHealthES : MonoBehaviour
 {
     [SerializeField]
-    float health = 3;
-    float maxHealth;
+    float health = 5;
     // Start is called before the first frame update
     void Start()
     {
-        maxHealth = health;
+        
     }
 
     // Update is called once per frame
@@ -20,7 +19,7 @@ public class EnemyHealthES : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "PlayerBullet")
+        if (collision.gameObject.tag == "EnemyBullet")
         {
             health -= 1;
             if (health <= 0)

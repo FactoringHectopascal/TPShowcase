@@ -9,19 +9,20 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     GameObject prefab;
     [SerializeField]
-    float shootSpeed = 10f;
+    float shootSpeed = 7f;
     [SerializeField]
     float bulletLifetime = 2.0f;
     float timer = 0;
     [SerializeField]
     float shootDelay = 0.5f;
+    
     // Update is called once per frame
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "ammobox")
         {
-            shootSpeed += 2f;
-            shootDelay -= 0.05f;
+            shootSpeed += 1f;
+            shootDelay -= 0.005f;
         }
     }
     void Update()

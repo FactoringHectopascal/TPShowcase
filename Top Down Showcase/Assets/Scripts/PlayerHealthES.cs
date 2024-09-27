@@ -10,10 +10,11 @@ public class PlayerHealthES : MonoBehaviour
     [SerializeField]
     float health = 10;
     [SerializeField]
-    float maxHealth;
+    float maxHealth = 10;
     [SerializeField]
     Image healthBar;
-
+    [SerializeField]
+    GameObject Shield;
     private void Start()
     {
         maxHealth = health;
@@ -36,6 +37,14 @@ public class PlayerHealthES : MonoBehaviour
         {
             health += 2;
             healthBar.fillAmount = health / maxHealth;
+            if(health > maxHealth)
+            {
+                health = maxHealth;
+            }
+        }
+        if(collision.gameObject.tag == "shieldbox")
+        {
+            Instantiate(Shield, transform.position, Quaternion.identity);
         }
     }
     

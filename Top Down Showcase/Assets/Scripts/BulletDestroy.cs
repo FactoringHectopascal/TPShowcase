@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class BulletDestroy : MonoBehaviour
 {
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Player") 
-        {
-            Destroy(gameObject);
+
+        if (collision.gameObject.tag != "Player")
+        {;
+            if(collision.gameObject.tag != "shield")
+            {
+                Destroy(gameObject);
+            }
         }
+       
     }
 }

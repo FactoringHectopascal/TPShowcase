@@ -14,7 +14,15 @@ public class PlayerMovement : MonoBehaviour
     {
         
     }
-
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "speedboost")
+        {
+            runSpeed += .5f;
+            moveSpeed += 1f;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -29,8 +37,9 @@ public class PlayerMovement : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(xInput, yInput) * runSpeed;
         }
-            
-
         
-    }
+
+   
+
+     }
 }
