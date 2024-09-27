@@ -226,10 +226,10 @@ MonoBehaviour:
   shootSpeed: 25
   bulletLifetime: 1.5
   timer: 0
-  shootDelay: 0.9
-  shootRange: 20
+  shootDelay: 0.4
+  shootRange: 30
   shotLeadMult: 0.4
-  shotVariance: 3
+  shotVariance: 3.5
 --- !u!114 &4828580920386965169
 MonoBehaviour:
   m_ObjectHideFlags: 0

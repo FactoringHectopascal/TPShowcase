@@ -12,6 +12,8 @@ TagManager:
   - speedboost
   - shield
   - shieldbox
+  - partner
+  - gunbox
   layers:
   - Default
   - TransparentFX

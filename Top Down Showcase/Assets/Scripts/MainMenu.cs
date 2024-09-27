@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField]
     string LevelToLoad = "Level 1";
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,7 @@ public class MainMenu : MonoBehaviour
 public void start()
     {
         SceneManager.LoadScene(LevelToLoad);
+        
     }
     public void quit()
     {

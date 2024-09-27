@@ -9,10 +9,13 @@ public class BulletDestroy : MonoBehaviour
     {
 
         if (collision.gameObject.tag != "Player")
-        {;
+        {
             if(collision.gameObject.tag != "shield")
             {
-                Destroy(gameObject);
+                if(collision.gameObject.tag != "partner")
+                {
+                    Destroy(gameObject);
+                }
             }
         }
        

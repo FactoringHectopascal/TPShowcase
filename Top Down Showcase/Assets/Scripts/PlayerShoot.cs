@@ -15,6 +15,8 @@ public class PlayerShoot : MonoBehaviour
     float timer = 0;
     [SerializeField]
     float shootDelay = 0.5f;
+    [SerializeField]
+    GameObject partner;
     
     // Update is called once per frame
     public void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +25,10 @@ public class PlayerShoot : MonoBehaviour
         {
             shootSpeed += 1f;
             shootDelay -= 0.005f;
+        }
+        if(collision.gameObject.tag == "gunbox")
+        {
+            Instantiate(partner, transform.position, Quaternion.identity);
         }
     }
     void Update()
