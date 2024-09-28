@@ -7,8 +7,12 @@ public class BossSummon : MonoBehaviour
 {
     [SerializeField]
     GameObject minion;
+    //[SerializeField]
+    //bool canSpawn = true;
     [SerializeField]
-    bool canSpawn = false;
+    float spawnTimerSeconds = 5f;
+    int spawnTimer; // initialized in Start()
+    
 
     //DOCUMENTATION: https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html
     // https://docs.unity3d.com/ScriptReference/WaitForSeconds.html
@@ -16,24 +20,43 @@ public class BossSummon : MonoBehaviour
     // https://docs.unity3d.com/ScriptReference/Coroutine.html
 
     void Start()
-    {
-        if (Time.time > 5)
-        {
-            StartCoroutine(Spawn());
-        }
+    {  
+        //StartCoroutine(Spawn());
+        spawnTimer = (int)(spawnTimerSeconds / Time.deltaTime);
+        // changes it to an int, then divides the seconds by the delta time (how much per frame)
     }
-    public IEnumerator Spawn()
+    private void Update()
     {
-        canSpawn = true;
-        Spawnin();
-        yield return new WaitForSeconds(2);
-    }
-    public void Spawnin()
-    {
-        if (canSpawn == true)
+        spawnTimer--;
+        if (spawnTimer <= 0)
         {
             Instantiate(minion, transform.position, Quaternion.identity);
-            canSpawn = false;
+            spawnTimer = (int)(spawnTimerSeconds / Time.deltaTime);
         }
     }
+
+
+//    public IEnumerator Spawn()
+//    {
+//        //canSpawn = true;
+//        //yield return new WaitForSeconds(5);
+//        //Spawnin();
+
+//        while (true)
+//        {
+//            yield return new WaitForSeconds(5);
+//            Instantiate(minion, transform.position, Quaternion.identity);
+//        }
+
+//    }
+//    //public void Spawnin()
+//    //{
+//    //    if (canSpawn == true)
+//    //    {
+//    //        Instantiate(minion, transform.position, Quaternion.identity);
+//    //        canSpawn = false;
+//    //       StartCoroutine(Spawn());
+//    //    }
+//    //}
+
 }
