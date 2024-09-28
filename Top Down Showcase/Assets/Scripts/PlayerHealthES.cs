@@ -15,14 +15,14 @@ public class PlayerHealthES : MonoBehaviour
     Image healthBar;
     [SerializeField]
     GameObject Shield;
-    private void Start()
+    public void Start()
     {
         maxHealth = health;
         
     }
     [SerializeField]
     string LevelLose;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "EnemyBullet")
         {

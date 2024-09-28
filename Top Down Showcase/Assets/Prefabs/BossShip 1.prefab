@@ -167,7 +167,8 @@ GameObject:
   - component: {fileID: 6028976773842811296}
   - component: {fileID: 396564876229042422}
   - component: {fileID: 7527026335026863109}
-  - component: {fileID: 6973265686791444492}
+  - component: {fileID: 5330389871286364052}
+  - component: {fileID: 371370857683291641}
   m_Layer: 0
   m_Name: BossShip 1
   m_TagString: Enemy
@@ -185,7 +186,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 619.85, y: 290.5, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 5.7909, y: 5.442, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 282103503373126765}
@@ -282,8 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35694fa26eeae5043be9601e154c8e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseSpeed: 8
-  ChaseTriggerDistance: 15
+  chaseSpeed: 0.6
+  ChaseTriggerDistance: 40
   returnHome: 0
 --- !u!114 &1966255786545629538
 MonoBehaviour:
@@ -302,7 +303,7 @@ MonoBehaviour:
   bulletLifetime: 2
   timer: 0
   shootDelay: 0.3
-  shootRange: 20
+  shootRange: 35
   shotLeadMult: 0.3
   shotVariance: 0.1
 --- !u!114 &8653058752929096064
@@ -408,7 +409,7 @@ PolygonCollider2D:
       - {x: -0.029317219, y: 0.42792767}
       - {x: -0.10583495, y: 0.33222455}
   m_UseDelaunayMesh: 0
---- !u!114 &6973265686791444492
+--- !u!114 &5330389871286364052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -417,12 +418,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 8541701227379253845}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f4241595cd54944ea12bce8dc3c4423, type: 3}
+  m_Script: {fileID: 11500000, guid: cca72c20fe4106d48a5a5fad04bc5eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 17
   healthBar: {fileID: 7287796409285789937}
-  maxHealth: 10
+  maxHealth: 17
+  prefab: {fileID: 4412137741950713690, guid: c423187b5320ae44ca78cedbc73f9149, type: 3}
+--- !u!114 &371370857683291641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8541701227379253845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f01edd9dc4c0ec40858ab13c6b0b380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minion: {fileID: 5828337229936903881, guid: a1850c38c72a7f04489a2870ebac1816, type: 3}
+  spawnTimerSeconds: 5
 --- !u!1 &8925167319963751017
 GameObject:
   m_ObjectHideFlags: 0

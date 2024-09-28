@@ -298,11 +298,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 259900734784683009, guid: d4b72011a252a6e4583b3f54cd4208f6, type: 3}
-  shootSpeed: 18
+  shootSpeed: 16
   bulletLifetime: 1.5
   timer: 0
-  shootDelay: 0.4
-  shootRange: 25
+  shootDelay: 0.5
+  shootRange: 23
   shotLeadMult: 0.4
   shotVariance: 3.5
 --- !u!114 &2922862579540029678

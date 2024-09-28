@@ -1,8 +1,9 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
 
@@ -17,7 +18,9 @@ public class PlayerMovement : MonoBehaviour
     float rollingIncrement = 5;
     float coolDown = 0f;
     float coolDownMax = 5f;
-  
+    [SerializeField]
+    Image cooldownBar;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
             rollingRotation %= 360; // dividing in increments with the numerator up to 360
             playerBody.transform.Rotate(new Vector3(0, rollingRotation,0), Space.Self);
             //rollingIncrement -= 0.1f;
+            GetComponent<BoxCollider2D>().enabled = false;
         }
         else
         {
@@ -64,13 +68,13 @@ public class PlayerMovement : MonoBehaviour
                     GetComponent<Rigidbody2D>().velocity += new Vector2(xInput * 5f, yInput * 5f);
                     rolling = rollingMax;
                     coolDown = coolDownMax; //add a cooldown
-                 
                 }
 
             }
             else
             {
                 coolDown -= Time.deltaTime; //if there is a countdown, count it down.
+                GetComponent<BoxCollider2D>().enabled = true;
             }
 
         }

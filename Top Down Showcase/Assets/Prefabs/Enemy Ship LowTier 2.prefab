@@ -223,11 +223,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 259900734784683009, guid: d4b72011a252a6e4583b3f54cd4208f6, type: 3}
-  shootSpeed: 18
+  shootSpeed: 16
   bulletLifetime: 1.5
   timer: 0
-  shootDelay: 0.4
-  shootRange: 25
+  shootDelay: 0.5
+  shootRange: 23
   shotLeadMult: 0.4
   shotVariance: 3.5
 --- !u!114 &4828580920386965169
@@ -348,7 +348,7 @@ MonoBehaviour:
   health: 4
   healthBar: {fileID: 181282693045435480}
   maxHealth: 4
-  prefab: {fileID: 5871315473528571521, guid: 80b7b4c4c03cc4b4bba5b379154fe5da, type: 3}
+  prefab: {fileID: 8307990605342112698, guid: 662f0090c0b5ed344a2df1f39208290f, type: 3}
 --- !u!1 &3468379725832838994
 GameObject:
   m_ObjectHideFlags: 0
