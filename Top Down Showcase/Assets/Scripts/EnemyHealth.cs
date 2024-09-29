@@ -34,5 +34,14 @@ public class EnemyHealth : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        if(collision.gameObject.tag == "bomb")
+        {
+            health -= 4;
+            healthBar.fillAmount = health / maxHealth;
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

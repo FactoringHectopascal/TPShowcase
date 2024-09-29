@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4177729488442754583}
   - component: {fileID: 1823135847183886165}
   - component: {fileID: 3389554633722218675}
-  - component: {fileID: 1368072225380813438}
+  - component: {fileID: 7067978781974087716}
   m_Layer: 0
   m_Name: BubbleShield
   m_TagString: shield
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
---- !u!114 &1368072225380813438
+--- !u!114 &7067978781974087716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4413108761445588073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5c8237d7eda3849a4ab478aa74906a, type: 3}
+  m_Script: {fileID: 11500000, guid: 68cf2b1dd3de501499993d4290d9a5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  maxHealth: 5

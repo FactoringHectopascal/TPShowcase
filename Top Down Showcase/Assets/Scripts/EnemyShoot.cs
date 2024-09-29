@@ -34,6 +34,7 @@ public class EnemyShoot : MonoBehaviour
             (player.GetComponent<Rigidbody2D>().velocity.x * shotLeadMult) + UnityEngine.Random.Range(-1 * shotVariance, shotVariance),
             (player.GetComponent<Rigidbody2D>().velocity.y * shotLeadMult) + UnityEngine.Random.Range(-1 * shotVariance, shotVariance), 0);
         if(timer > shootDelay && shootDir.magnitude <= shootRange)
+            // kind of dense, add to the shootdirection the velocity of the player * a fudge factor, plus the shot variance
         {
             timer = 0;
             shootDir.Normalize();

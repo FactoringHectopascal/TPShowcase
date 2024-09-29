@@ -9,15 +9,15 @@ public class EnemyLook : MonoBehaviour
     GameObject player;
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Player"); // find the player
     }
     public void FacePlayer()
     {
-        transform.up = player.transform.position - transform.position;
+        transform.up = player.transform.position - transform.position; //the y transform = player - your current transform position
     }
 
     void Update()
     {
-        FacePlayer(); 
+        FacePlayer(); //always face the player
     }
 }

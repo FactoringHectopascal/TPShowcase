@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 371370857683291641}
   m_Layer: 0
   m_Name: BossShip 1
-  m_TagString: Enemy
+  m_TagString: boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,7 +186,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 619.85, y: 290.5, z: 0}
-  m_LocalScale: {x: 5.7909, y: 5.442, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 282103503373126765}
@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18563261a6994142835044659d2d75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 259900734784683009, guid: d4b72011a252a6e4583b3f54cd4208f6, type: 3}
+  prefab: {fileID: 1943294241840889970, guid: b140c333e089c324fb8e568ca6f013d3, type: 3}
   shootSpeed: 25
   bulletLifetime: 2
   timer: 0
@@ -421,9 +421,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca72c20fe4106d48a5a5fad04bc5eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 17
+  health: 50
   healthBar: {fileID: 7287796409285789937}
-  maxHealth: 17
+  maxHealth: 50
   prefab: {fileID: 4412137741950713690, guid: c423187b5320ae44ca78cedbc73f9149, type: 3}
 --- !u!114 &371370857683291641
 MonoBehaviour:
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f01edd9dc4c0ec40858ab13c6b0b380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minion: {fileID: 5828337229936903881, guid: a1850c38c72a7f04489a2870ebac1816, type: 3}
+  minion: {fileID: 4431008349537470482, guid: 9a3efdd526803c346bfed48e9da64542, type: 3}
   spawnTimerSeconds: 5
 --- !u!1 &8925167319963751017
 GameObject:

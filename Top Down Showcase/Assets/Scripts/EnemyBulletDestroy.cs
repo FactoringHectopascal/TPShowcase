@@ -8,7 +8,13 @@ public class EnemyBulletDestroy : MonoBehaviour
     {
         if (collision.gameObject.tag != "Enemy")
         {
-            Destroy(gameObject);
+            if(collision.gameObject.tag != "boss")
+            {
+                if(collision.gameObject.tag != "minion")
+                {
+                       Destroy(gameObject);
+                }
+            }
         }
     }
 }

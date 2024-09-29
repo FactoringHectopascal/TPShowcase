@@ -6,25 +6,23 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
-
     [SerializeField]
     float moveSpeed = 10f;
     [SerializeField]
     float runSpeed = 12f;
     [SerializeField]
-    float rollingMax = 0.005f;
-    float rolling = 0f;
+    float rollingMax = 5f;
+    public float rolling = 0f;
     float rollingRotation = 0;
-    float rollingIncrement = 5;
+    float rollingIncrement = 3;
     float coolDown = 0f;
-    float coolDownMax = 5f;
-    [SerializeField]
-    Image cooldownBar;
+    float coolDownMax = 1.5f;
+    
     
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,15 +36,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Rigidbody2D playerBody = GetComponent<Rigidbody2D>();
         if (rolling > 0f)
         {
             rolling -= Time.deltaTime; //countdown timer
             rollingRotation += rollingIncrement; //adding increment to rotation
-            rollingRotation %= 360; // dividing in increments with the numerator up to 360
-            playerBody.transform.Rotate(new Vector3(0, rollingRotation,0), Space.Self);
+            rollingRotation %= 360; // capping the rotation at 360 degrees
+            GetComponent<Rigidbody2D>().transform.Rotate(new Vector3(0, rollingRotation,0), Space.Self);
             //rollingIncrement -= 0.1f;
-            GetComponent<BoxCollider2D>().enabled = false;
         }
         else
         {
@@ -63,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (coolDown <= 0f) // if cooldown is less than or equal to zero
             {
-                if (Input.GetKey(KeyCode.Mouse1))
+                if (Input.GetKey(KeyCode.F))
                 {
                     GetComponent<Rigidbody2D>().velocity += new Vector2(xInput * 5f, yInput * 5f);
                     rolling = rollingMax;
@@ -74,7 +70,6 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 coolDown -= Time.deltaTime; //if there is a countdown, count it down.
-                GetComponent<BoxCollider2D>().enabled = true;
             }
 
         }

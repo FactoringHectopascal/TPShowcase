@@ -348,7 +348,7 @@ MonoBehaviour:
   health: 4
   healthBar: {fileID: 181282693045435480}
   maxHealth: 4
-  prefab: {fileID: 8307990605342112698, guid: 662f0090c0b5ed344a2df1f39208290f, type: 3}
+  prefab: {fileID: 8765857114091487528, guid: f83c7a82dadb66e4188aea2a4aa8daa0, type: 3}
 --- !u!1 &3468379725832838994
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,17 +21,26 @@ public class EnemyHealth1 : MonoBehaviour
 
     void Update()
     {
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "PlayerBullet")
+        if (collision.gameObject.tag == "PlayerBullet")
         {
             health -= 1;
             healthBar.fillAmount = health / maxHealth;
             if (health <= 0)
             {
                 Instantiate(prefab, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+        }
+        if (collision.gameObject.tag == "bomb")
+        {
+            health -= 4;
+            healthBar.fillAmount = health / maxHealth;
+            if (health <= 0)
+            {
                 Destroy(gameObject);
             }
         }

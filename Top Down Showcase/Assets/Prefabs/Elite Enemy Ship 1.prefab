@@ -298,13 +298,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 259900734784683009, guid: d4b72011a252a6e4583b3f54cd4208f6, type: 3}
-  shootSpeed: 55
+  shootSpeed: 40
   bulletLifetime: 5
   timer: 0
   shootDelay: 1.3
   shootRange: 60
   shotLeadMult: 0.2
-  shotVariance: 0
+  shotVariance: 0.1
 --- !u!114 &2932706822121958690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a9984b6175b6a4f8c2940ee7206777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 4412137741950713690, guid: c423187b5320ae44ca78cedbc73f9149, type: 3}
 --- !u!60 &7514737352225333577
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -420,10 +420,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca72c20fe4106d48a5a5fad04bc5eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 12
   healthBar: {fileID: 3122411826872764886}
-  maxHealth: 10
-  prefab: {fileID: 8307990605342112698, guid: 662f0090c0b5ed344a2df1f39208290f, type: 3}
+  maxHealth: 12
+  prefab: {fileID: 3635880003486213172, guid: 357ac984a27bc78458d57e70e5dae1c1, type: 3}
 --- !u!1 &4620897971027841308
 GameObject:
   m_ObjectHideFlags: 0

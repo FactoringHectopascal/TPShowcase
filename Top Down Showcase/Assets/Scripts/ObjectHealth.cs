@@ -18,12 +18,17 @@ public class ObjectHealth : MonoBehaviour
             if(health <= 0)
             {
                 Instantiate(drop, transform.position, Quaternion.identity);
-                Destroy(gameObject);
+                Destroy(gameObject); // spawn something and then kill yourself
             }
         }
-      if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "bomb")
         {
-            Destroy(gameObject);
+            health -= 11;
+            if (health <= 0)
+            {
+                Instantiate(drop, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
         }
     }
 }

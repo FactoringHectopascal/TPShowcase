@@ -12,6 +12,7 @@ public class BossSummon : MonoBehaviour
     [SerializeField]
     float spawnTimerSeconds = 5f;
     int spawnTimer; // initialized in Start()
+
     
 
     //DOCUMENTATION: https://docs.unity3d.com/ScriptReference/MonoBehaviour.StartCoroutine.html
@@ -20,7 +21,7 @@ public class BossSummon : MonoBehaviour
     // https://docs.unity3d.com/ScriptReference/Coroutine.html
 
     void Start()
-    {  
+    {
         //StartCoroutine(Spawn());
         spawnTimer = (int)(spawnTimerSeconds / Time.deltaTime);
         // changes it to an int, then divides the seconds by the delta time (how much per frame)
@@ -28,10 +29,13 @@ public class BossSummon : MonoBehaviour
     private void Update()
     {
         spawnTimer--;
-        if (spawnTimer <= 0)
+        if (GameObject.FindGameObjectsWithTag("minion").Length < 5)
         {
-            Instantiate(minion, transform.position, Quaternion.identity);
-            spawnTimer = (int)(spawnTimerSeconds / Time.deltaTime);
+            if (spawnTimer <= 0)
+            {
+                Instantiate(minion, new Vector2(transform.position.x + 2, transform.position.y + 2), Quaternion.identity);
+                spawnTimer = (int)(spawnTimerSeconds / Time.deltaTime);
+            }
         }
     }
 

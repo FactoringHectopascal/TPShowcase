@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 651976155259322919}
   - component: {fileID: 4061202099718260614}
   - component: {fileID: 677441643549846116}
-  - component: {fileID: 6369401891067753319}
   - component: {fileID: 299868441882817912}
+  - component: {fileID: 1554226016770230543}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -134,6 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   runSpeed: 15
+  rollingMax: 0.5
+  rolling: 0
 --- !u!114 &3999195419327311714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +152,10 @@ MonoBehaviour:
   shootSpeed: 50
   bulletLifetime: 4
   shootDelay: 0.2
-  boost: {fileID: 0}
+  partner: {fileID: 7387956543861763732, guid: f16137796f029834a844ecfa1f9070ef, type: 3}
+  rocketCooldown: 0
+  rocketCooldownMax: 2
+  rocketPrefab: {fileID: 7392088738245008831, guid: 44df8ba81bf2e0442acbd958ed340554, type: 3}
 --- !u!114 &6886261905200214095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,8 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fcb7d05662202468f6e94f9a571e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  maxHealth: 5
+  health: 10
+  maxHealth: 10
   healthBar: {fileID: 0}
   Shield: {fileID: 4413108761445588073, guid: 02105c84d9fdfbc45afafd94d90ab646, type: 3}
   LevelLose: Lose
@@ -213,19 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9445a7dc1b39173458cc78116f9fdccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6369401891067753319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5044516071514121120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34d5fd45ed13b1647a18175567ee9afb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LevelToLoad: Win
 --- !u!61 &299868441882817912
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -271,3 +263,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.22042856, y: 0.5564432}
   m_EdgeRadius: 0
+--- !u!114 &1554226016770230543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5044516071514121120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d5fd45ed13b1647a18175567ee9afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelToLoad: Win

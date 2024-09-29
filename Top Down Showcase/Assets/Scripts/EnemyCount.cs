@@ -16,7 +16,7 @@ public class EnemyCount : MonoBehaviour
     }
     void Update()
     {
-    if(GameObject.FindGameObjectsWithTag("Enemy").Length < 1)
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length < 1 && GameObject.FindGameObjectsWithTag("boss").Length < 1)
         {
             SceneManager.LoadScene(LevelToLoad);
         }

@@ -17,6 +17,12 @@ public class PlayerShoot : MonoBehaviour
     float shootDelay = 0.5f;
     [SerializeField]
     GameObject partner;
+    [SerializeField]
+    float rocketCooldown = 0f;
+    [SerializeField]
+    float rocketCooldownMax = 2f;
+    [SerializeField]
+    GameObject rocketPrefab;
     
     // Update is called once per frame
     public void OnTriggerEnter2D(Collider2D collision)
@@ -53,6 +59,28 @@ public class PlayerShoot : MonoBehaviour
             //Debug.Log(mousePos);
             //Uses pixel coordinates, meaning that it uses the boundaries of the monitor
             //Camera converts this onto its plane of existence, however this also includes the z value.
+        }
+        if (rocketCooldown <= 0) // if there is no cooldown
+        {
+
+            if (Input.GetKey(KeyCode.R))
+            {
+                Vector3 mousePos = Input.mousePosition;
+                mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+                mousePos.z = 0;
+                mousePos = mousePos - transform.position;
+                mousePos.Normalize();
+                //spawn in the bullet
+                GameObject rocket = Instantiate(rocketPrefab, transform.position, Quaternion.identity);
+                rocket.GetComponent<Rigidbody2D>().velocity = mousePos * shootSpeed;
+                Destroy(rocket, bulletLifetime);
+                rocketCooldown = rocketCooldownMax; // reset the cooldown
+
+            }
+        }
+        else
+        {
+            rocketCooldown -= Time.deltaTime; // count down the cooldown
         }
     }
 
