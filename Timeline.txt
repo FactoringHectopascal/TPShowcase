@@ -1,13 +1,27 @@
 - Create A Main Menu (Complete)
-- Create A Basic Scene for the Main Menu to load. (Done, Finished)
-- Basic Player Character (Shooting, Movement, Health.) 
+- Create A Basic Scene for the Main Menu to load. (Done)
+- Basic Player Character (Done)
 - Enemy Prefab (Add Health, Shooting, etc.) (Done)
 - Test/Add Win/Lose Conditions (Complete)
 - Pause Menu (Complete)
 - Health Bar/Other UI elements like Stamina (Health Bar Complete, Enemy Health Bar Complete)
-- Create A Second Scene & Condition to move on to a second level (Condition Created)
-- Create Art/Dev Art (In Progress)
+- Create A Second Scene & Condition to move on to a second level (Done)
+- Create Art/Dev Art (Done)
 - Adding Animation to player character and enemies (Done, no gunfire animation.)
-- Start Designing First Level (Done, subject to improvement)
-- Start Designing Second Level when first level is finished.
+- Start Designing First Level (Done)
+- Start Designing Second Level (Done)
+- Other Mechanics, Dashing, Bomb. (Done)
 
+I have added in this showcase:
+- Two unique levels with different tilesets.
+- Three unique enemys, all containing different accuracies, firerates, health values & drops.
+- Powerup drops, which all do different things.
+- Dashing with Iframes with a working cooldown.
+- A bomb with working cooldown.
+- A boss that summons minions with a working cooldown and enemy limit.
+- An enemy counter that loads the next level when there are no enemies.
+- Working main menu, pause menu, Lose menu, and Win menu.
+What I have not added:
+- Enemy Counter in the UI
+- Tutorial
+- Stamina
