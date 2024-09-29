@@ -14137,6 +14137,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6848689811790915467, guid: 968adc989f9121a4b85c2dbbbdf182fa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 7497459350711755526, guid: 968adc989f9121a4b85c2dbbbdf182fa, type: 3}
       propertyPath: drop
       value: 
@@ -56462,6 +56466,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6848689811790915467, guid: 968adc989f9121a4b85c2dbbbdf182fa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 7718605798238737814, guid: 968adc989f9121a4b85c2dbbbdf182fa, type: 3}
       propertyPath: m_Name
       value: EliteCrate

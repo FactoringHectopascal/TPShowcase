@@ -1,3 +1,5 @@
+This is an archive of my workflow, this is the timeline I used to create this Top Down Showcase;
+It's readability is suboptimal to anyone except for me, and even I had to switch around my priorities a few times.
 - Create A Main Menu (Complete)
 - Create A Basic Scene for the Main Menu to load. (Done)
 - Basic Player Character (Done)
@@ -11,6 +13,7 @@
 - Start Designing First Level (Done)
 - Start Designing Second Level (Done)
 - Other Mechanics, Dashing, Bomb. (Done)
+Archive Over
 
 I have added in this showcase:
 - Two unique levels with different tilesets.
@@ -21,7 +24,33 @@ I have added in this showcase:
 - A boss that summons minions with a working cooldown and enemy limit.
 - An enemy counter that loads the next level when there are no enemies.
 - Working main menu, pause menu, Lose menu, and Win menu.
-What I have not added:
-- Enemy Counter in the UI
-- Tutorial
+- A lot of spaghetti.
+
+What Hit The Cutting Room Floor:
+- Health Regen
+- Enemy Counter UI
+- Asteroids
+- Some Tiles
+- Gunfire Animation
 - Stamina
+
+Why Did These Things Not Make It? :
+Health Regen - I thought that adding a health regen would be unnecessary, and would disrupt the balance of the game.
+Especially considering that there are medkit drops that ships will drop for you, it all felt unnecessary. I thought it wouldn't be a good use
+of my time, and instead I could use my time for things like implementing the dodge.
+Enemy Counter UI - Honestly, I was feeling lazy. I could add this if I wanted to, but with all the work I've done on this project,
+I feel I have something I'm proud of, and that any more adjustments might just cost me extra time when I'm already done with the thing and so
+inundated with other assigments.
+Asteroids - How would I even implement this? A spawning script that spawns an asteroid that follows you and hits you and breaks unless you shoot it?
+Sure, that sounds kind of cool, but honesty I wasn't trying to fall prey to feature creep anymore than I already was with a SHOWCASE. This is a learning game.
+This isn't anything that people are going to be playing at the moment, this is a showcase of my current technical skill and my ability to learn and apply things
+within C# and Unity. I feel like I'm proud enough with the current mechanics of my showcase. I might add asteroids on my spare time, but as it currently stands it won't 
+make it into the cut I'm going to be presenting. Also, I'm just feeling kind of burnt out. I have a burning passion for coding, but I have literally been programming nonstop
+for like a week without any recreation. I want to play video games, too.
+Unused Sprites In My Tilesets - Some of them hurt my eyes to look at, especially if it was a repeating tile with color. It didn't look good, at all. So, I opted for something
+more subtle. Thankfully, my class doesn't judge my artistic ability; I feel like I can make something decent in pixel art, but I'm not a master. So the subtle tiles I add
+look nice enough.
+Gunfire Animation - A gunfire animation would've looked cool, and I might still implement it on my own time after I show my project to my teacher. But, as it currently stands,
+I know neither how to make it look nice, or if it's a good use of my time to do so when I'm so overwhelmed with other assignments.
+Stamina - It would've been a decent thing to implement. However, I didn't want to implement it. There's a reason Dante doesn't have a stamina bar, and he doesn't have to retreat from enemies to
+recover. I think this isn't that kind of game. In games like Dark Souls, it makes sense. It games like Devil May Cry, it wouldn't really.
