@@ -13,7 +13,7 @@ public class EnemyLook : MonoBehaviour
     }
     public void FacePlayer()
     {
-        transform.up = player.transform.position - transform.position; //the y transform = player - your current transform position
+        transform.up = player.transform.position - transform.position; 
     }
 
     void Update()
