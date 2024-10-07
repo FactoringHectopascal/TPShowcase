@@ -17,6 +17,7 @@ TagManager:
   - bomb
   - minion
   - boss
+  - wall
   layers:
   - Default
   - TransparentFX
